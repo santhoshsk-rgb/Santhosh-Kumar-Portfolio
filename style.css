@@ -143,16 +143,15 @@ text-align:center;
 }
 
 .project-container{
-display:flex;
+display:grid;
+grid-template-columns:repeat(3,1fr);
 gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+max-width:1000px;
+margin:auto;
 }
 
 .project-card{
 background:white;
-width:300px;
-flex:1 1 300px;
 border-radius:10px;
 padding:15px;
 transition:0.3s;
@@ -225,16 +224,11 @@ color:white;
 background-color:#121212;
 }
 
-.dark-mode .hobbies p{
+.dark-mode .hobbies li{
 color:black;
 }
 
 .dark-mode .project-card{
-color:black;
-}
-
-.dark-mode .project-card h3,
-.dark-mode .project-card p{
 color:black;
 }
 
@@ -271,9 +265,19 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* Tablet Responsive */
+
+@media (max-width:900px){
+
+.project-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
 /* Mobile Responsive */
 
-@media (max-width:768px){
+@media (max-width:600px){
 
 .home-container{
 flex-direction:column;
@@ -286,13 +290,7 @@ height:140px;
 }
 
 .project-container{
-flex-direction:column;
-align-items:center;
-}
-
-.project-card{
-width:90%;
-flex: none;
+grid-template-columns:1fr;
 }
 
 .navbar{
