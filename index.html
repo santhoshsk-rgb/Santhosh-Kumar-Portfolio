@@ -15,25 +15,21 @@
 
 <h2>Santhosh Kumar</h2>
 
-<div class="nav-right">
-
-<button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-
-<div class="menu-icon" onclick="toggleMenu()">
-☰
-</div>
-
-</div>
-
 <ul id="menu">
-
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
+
+<div class="nav-right">
+
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+</div>
 
 </nav>
 
@@ -178,7 +174,7 @@ menu.classList.toggle("show");
 
 /* dark mode */
 
-function toggleDarkMode(){
+function toggleDark(){
 
 document.body.classList.toggle("dark-mode");
 
@@ -186,12 +182,6 @@ document.body.classList.toggle("dark-mode");
 
 </script>
 
-<!-- Dark Mode -->
-<script>
-    function toggleDarkMode(){
-        document.body.classList.toggle("dark-mode");
-    }
-</script>
 <!-- running text -->
 <script>
 
