@@ -3,14 +3,21 @@ font-family:Arial;
 margin:0;
 }
 
+html{
+scroll-behavior: smooth;
+}
 /* Navbar */
 
 .navbar{
-background-color:black;
+background:black;
 color:white;
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px;
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
 .navbar ul{
@@ -20,6 +27,46 @@ list-style:none;
 
 .navbar li{
 margin-left:20px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+}
+
+.navbar a:hover{
+color:#1e90ff;
+}
+.nav-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.dark-toggle{
+background:none;
+border:none;
+font-size:22px;
+cursor:pointer;
+color:white;
+}
+
+.dark-toggle:hover{
+transform:scale(1.2);
+}
+
+.menu-icon{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.navbar button{
+background:transparent;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:5px;
 cursor:pointer;
 }
 
@@ -120,18 +167,21 @@ border-radius:10px;
 }
 
 .html{
-width:90%;
+width:0;
 background:orange;
+transition:width 2s;
 }
 
 .css{
-width:80%;
+width:0;
 background:blue;
+transition:width 2s;
 }
 
 .js{
-width:60%;
+width:0;
 background:gold;
+transition:width 2s;
 }
 
 /* Projects */
@@ -300,6 +350,29 @@ grid-template-columns:1fr; /* 1 card */
 .navbar{
 flex-direction:column;
 align-items:center;
+}
+
+}
+
+@media (max-width:768px){
+
+.menu-icon{
+display:block;
+}
+
+.navbar ul{
+display:none;
+flex-direction:column;
+width:100%;
+text-align:center;
+}
+
+.navbar ul.show{
+display:flex;
+}
+
+.navbar li{
+margin:10px 0;
 }
 
 }
